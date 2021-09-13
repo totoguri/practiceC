@@ -1,3 +1,5 @@
+// Revival of C
+
 #include <stdio.h>
 
 //int main() {
@@ -92,3 +94,58 @@
 //	return 0;
 //}
 
+// p.274
+
+//int main(void) {
+//	int arr[3] = { 0, 1, 2 };
+//	printf("Name of the Array: %p \n", arr);
+//	printf("First: %p \n", &arr[0]);
+//	printf("Second: %p \n", &arr[1]);
+//	printf("Third: %p \n", &arr[2]);
+//
+//	return 0;
+//}
+
+//int main() {
+//	int arr[3] = { 15, 25, 35 };
+//	int* ptr = arr;
+//
+//	printf("%d %d \n", ptr[0], arr[0]);		// ptr == address, arr == address. So,
+//	printf("%d %d \n", ptr[1], arr[1]);		// able to express the value as arr[0].
+//	printf("%d %d \n", ptr[2], arr[2]);		// this means the same as *arr.
+//	printf("%p %p \n", ptr, arr);			// arr[0] == *arr
+//	printf("%p %p \n", &ptr[1], &arr[1]);
+//	printf("%d %d \n", *ptr, *arr);
+//	return 0;
+//}
+
+//int main() {
+//	int* ptr1 = 0x0010;
+//	double* ptr2 = 0x0010;
+//
+//	printf("%p %p \n", ptr1 + 1, ptr1 + 2);		// size of int is increased.
+//	printf("%p %p \n", ptr2 + 1, ptr2 + 2);		// size of double is increased.
+//
+//	printf("%p %p \n", ptr1, ptr2);
+//	ptr1++;
+//	ptr2++;
+//	printf("%p %p \n", ptr1, ptr2);
+//	return 0;
+//}
+
+//int main() {
+//	int arr[3] = { 11, 22, 33 };
+//	int* ptr = arr;
+//	printf("%d %d %d \n", *ptr, *(ptr + 1), *(ptr + 2));
+//	// == ptr[0], ptr[1], ptr[2]
+//	// == arr[0], arr[1], arr[2]
+//
+//	printf("%d ", *ptr); ptr++;
+//	printf("%d ", *ptr); ptr++;
+//	printf("%d ", *ptr); ptr--;
+//	printf("%d ", *ptr); ptr--;
+//	printf("%d ", *ptr); printf("\n");
+//	return 0;
+//}
+
+// p.300
