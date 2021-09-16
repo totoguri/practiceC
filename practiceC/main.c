@@ -456,34 +456,93 @@
 
 
 // ** 함수 포인터 개인 연습 **
-int Func(int* ptr1, int* ptr2, int (*cmp)(int* n1, int* n2)) {
-	cmp(ptr1, ptr2);
-}
+//int Func(int* ptr1, int* ptr2, int (*cmp)(int* n1, int* n2)) {
+//	cmp(ptr1, ptr2);
+//}
+//
+//int Swap(int* n1, int* n2) {
+//	int temp = *n1;
+//	*n1 = *n2;
+//	*n2 = temp;
+//}
+//
+//int PlusOne(int* n1, int* n2) {
+//	*n1 += 1;
+//	*n2 += 1;
+//}
+//
+//int main() {
+//	int num1 = 10;
+//	int num2 = 100;
+//
+//	printf("num1: %d \nnum2: %d\n\n", num1, num2);
+//
+//	printf("** Swap **\n");
+//	Func(&num1, &num2, Swap);
+//	printf("num1: %d \nnum2: %d\n\n", num1, num2);
+//
+//	printf("** PlusOne **\n");
+//	Func(&num1, &num2, PlusOne);
+//	printf("num1: %d \nnum2: %d\n\n", num1, num2);
+//
+//	return 0;
+//}
 
-int Swap(int* n1, int* n2) {
-	int temp = *n1;
-	*n1 = *n2;
-	*n2 = temp;
-}
 
-int PlusOne(int* n1, int* n2) {
-	*n1 += 1;
-	*n2 += 1;
-}
+//void SoSimpleFunc(void) {
+//	printf("I'm so simple");
+//}
+//
+//int main(void) {
+//	int num = 20;
+//	void* ptr;
+//
+//	ptr = &num;
+//	printf("%p \n", ptr);
+//
+//	ptr = SoSimpleFunc;
+//	printf("%p \n", ptr);
+//	return 0;
+//}
 
-int main() {
-	int num1 = 10;
-	int num2 = 100;
 
-	printf("num1: %d \nnum2: %d\n\n", num1, num2);
+//int main(int argc, char* argv[]) {
+//	int i = 0;
+//	printf("전달된 문자열의 수: %d \n", argc);
+//
+//	for (i = 0; i < argc; i++)
+//		printf("%d번째 문자열: %s \n", i + 1, argv[i]);
+//	return 0;
+//}
 
-	printf("** Swap **\n");
-	Func(&num1, &num2, Swap);
-	printf("num1: %d \nnum2: %d\n\n", num1, num2);
 
-	printf("** PlusOne **\n");
-	Func(&num1, &num2, PlusOne);
-	printf("num1: %d \nnum2: %d\n\n", num1, num2);
+//void ShowAllString(int argc, char* argv[]) {
+//	int i;
+//	for (i = 0; i < argc; i++)
+//		printf("%s \n", argv[i]);
+//}
+//
+//int main(void) {
+//	char* str[3] = {
+//		"C Programming",
+//		"C++ Programming",
+//		"Java Programming"
+//	};
+//	ShowAllString(3, str);
+//	return 0;
+//}
 
-	return 0;
-}
+
+//int main(void) {
+//	int ch1, ch2;
+//
+//	ch1 = getchar();
+//	ch2 = fgetc(stdin);
+//
+//	putchar(ch1);
+//	fputc(ch2, stdout);
+//	return 0;
+//}
+
+
+// p.421
