@@ -546,3 +546,181 @@
 
 
 // p.421
+
+
+//int main() {
+//	int ch;
+//
+//	while (1) {
+//		ch = getchar();
+//		if (ch == EOF)
+//			break;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+
+
+//int main() {
+//	char* str = "Simple String";
+//
+//	printf("1. puts test ------ \n");
+//	puts(str);
+//	puts("So Simple String");
+//
+//	printf("2. fputs test ------ \n");
+//	fputs(str, stdout); printf("\n");
+//	fputs("So Simple String", stdout); printf("\n");
+//
+//	printf("3. end of main ---- \n");
+//	return 0;
+//}
+
+
+//int main(void) {
+//	char str[7];
+//	int i;
+//
+//	for (i = 0; i < 3; i++) {
+//		fgets(str, sizeof(str), stdin);
+//		printf("Read %d: %s \n", i + 1, str);
+//	}
+//
+//	return 0;
+//}
+
+
+//void ClearLineFromReadBuffer(void) {
+//	while (getchar() != '\n');
+//}
+//
+//int main(void) {
+//	char perID[7];
+//	char name[10];
+//
+//	fputs("주민번호 앞 6자리 입력: ", stdout);
+//	fgets(perID, sizeof(perID), stdin);
+//	ClearLineFromReadBuffer();
+//
+//	fputs("이름 입력: ", stdout);
+//	fgets(name, sizeof(name), stdin);
+//
+//	printf("주민번호: %s\n", perID);
+//	printf("이름: %s\n", name);
+//	return 0;
+//}
+
+
+//#include <string.h>
+//
+//void RemoveBSN(char str[]) {
+//	int len = strlen(str);
+//	str[len - 1] = 0;
+//}
+//
+//int main(void) {
+//	char str[100];
+//	printf("문자열 입력: ");
+//	fgets(str, sizeof(str), stdin);
+//	printf("길이: %d, 내용: %s \n", strlen(str), str);
+//
+//	RemoveBSN(str);
+//	printf("길이: %d, 내용: %s \n", strlen(str), str);
+//	return 0;
+//}
+
+
+//struct point {
+//	int xpos;
+//	int ypos;
+//};
+//
+//int main(void) {
+//	struct point pos1 = { 1, 2 };
+//	struct point pos2 = { 100, 200 };
+//	struct point* pptr = &pos1;
+//
+//	(*pptr).xpos += 4;
+//	(*pptr).ypos += 5;
+//	printf("[%d, %d] \n", pptr->xpos, pptr->ypos);
+//
+//	pptr = &pos2;
+//	pptr->xpos += 1;
+//	pptr->ypos += 2;
+//	printf("[%d, %d] \n", (*pptr).xpos, (*pptr).ypos);
+//	return 0;
+//}
+
+
+//struct point {
+//	int xpos;
+//	int ypos;
+//};
+//
+//struct circle {
+//	double radius;
+//	struct point* center;
+//};
+//
+//int main() {
+//	struct point cen = { 2, 7 };
+//	double rad = 5.5;
+//
+//	struct circle ring = { rad, &cen };
+//	printf("원의 반지름: %g \n", ring.radius);
+//	printf("원의 중심 [%d, %d] \n", (ring.center)->xpos, (ring.center)->ypos);
+//	return 0;
+//}
+
+
+//struct point {
+//	int xpos;
+//	int ypos;
+//	struct point* ptr;
+//};
+//
+//int main(void) {
+//	struct point pos1 = { 1, 1 };
+//	struct point pos2 = { 2, 2 };
+//	struct point pos3 = { 3, 3 };
+//
+//	pos1.ptr = &pos2;
+//	pos2.ptr = &pos3;
+//	pos3.ptr = &pos1;
+//
+//	printf("Connection to Points\n");
+//	printf("[%d, %d] and [%d, %d] \n",
+//		pos1.xpos, pos1.ypos, pos1.ptr->xpos, pos1.ptr->ypos);
+//	printf("[%d, %d] and [%d, %d] \n",
+//		pos2.xpos, pos2.ypos, pos2.ptr->xpos, pos2.ptr->ypos);
+//	printf("[%d, %d] and [%d, %d] \n",
+//		pos3.xpos, pos3.ypos, pos3.ptr->xpos, pos3.ptr->ypos);
+//
+//	return 0;
+//}
+
+
+typedef struct point {
+	int xpos;
+	int ypos;
+} Point;
+
+void ShowPosition(Point pos) {
+	printf("[%d, %d] \n", pos.xpos, pos.ypos);
+}
+
+Point GetCurrentPosition(void) {
+	Point cen;
+	printf("Input current pos: ");
+	scanf_s("%d %d", &cen.xpos, &cen.ypos);
+	return cen;
+}
+
+int main(void) {
+	Point curPos = GetCurrentPosition();
+	ShowPosition(curPos);
+	return 0;
+}
+
+
+// p.479
