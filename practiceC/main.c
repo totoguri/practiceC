@@ -1040,3 +1040,32 @@
 // p.566
 
 
+//#define ADD 1
+//#define MIN 0
+//
+//int main() {
+//	int num1, num2;
+//	printf("두 개의 정수 입력: "); 
+//	scanf_s("%d %d", &num1, sizeof(num1), &num2, sizeof(num2));
+//
+//#if ADD
+//	printf("%d + %d = %d \n", num1, num2, num1 + num2);
+//#endif
+//
+//#if MIN
+//	printf("%d - %d = %d \n", num1, num2, num1 - num2);
+//#endif
+//	return 0;
+//}
+
+
+//#define STRING_JOB(A, B) #A "의 직업은 " #B "입니다."
+//
+//int main() {
+//	printf("%s \n", STRING_JOB(Lee, carpenter));
+//	printf("%s \n", STRING_JOB(Han, driver));
+//	return 0;
+//}
+
+
+// The end of 'C'
